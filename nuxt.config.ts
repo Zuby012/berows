@@ -11,6 +11,9 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+  modules: [
+    '@nuxt/image',
+  ],
   app: {
     head: {
       titleTemplate: 'Berows University - %s',
