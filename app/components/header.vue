@@ -2,7 +2,7 @@
     <div class="flex items-center justify-between text-white">
         <!--logo and school name-->
         <div class="flex items-center gap-2">
-            <img src="/logo1.1.png" alt="Berows logo" loading="lazy" class="w-25 h-20">
+            <NuxtImg src="/logo1.1.png" alt="Berows logo" format="webp" loading="lazy" class="w-25 h-20" />
             <h1 class="text-2xl font-serif font-bold">BEROWS UNIVERSITY</h1>
         </div>
         <!--mobile responsive menu icon-->

@@ -5,7 +5,7 @@
         </header>
         <main class="p-10 flex flex-col gap-10">
             <div class="flex items-center justify-between">
-                <NuxtImg src="/img1.png" alt="welcome" loading="lazy" class="hidden md:block md:w-100 lg:w-auto" />
+                <img src="/img1.png" alt="welcome" loading="lazy" class="hidden md:block md:w-100 lg:w-auto" />
                 <div class="flex flex-col">
                     <h1 class="text-5xl font-extrabold">Welcome to Our School</h1>
                     <p class="my-5">
@@ -29,7 +29,7 @@
                     </div>
                     <span class="w-full p-3"><button class="bg-green-900 text-white py-3 px-6 rounded-lg hover:scale-150 duration-500">Learn More</button></span>
                 </div>
-                <NuxtImg src="/img2.png" alt="about" loading="lazy" class="hidden md:block md:w-100 lg:w-auto" />
+                <NuxtImg src="/img2.png" alt="about" format="webp" loading="lazy" class="hidden md:block md:w-100 lg:w-100" />
             </div>
         </main>
         <footer>
