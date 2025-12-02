@@ -11,7 +11,7 @@
                     <p class="my-5">
                         Providing Quality Education since 1923.
                     </p>
-                    <span class="w-full p-3 flex lg:justify-center"><button class="bg-green-900 text-white py-3 px-6 rounded-lg">Learn More</button></span>
+                    <span class="w-full p-3 flex lg:justify-center"><button class="bg-green-900 text-white py-3 px-6 rounded-lg hover:scale-150 duration-500">Learn More</button></span>
                 </div>
             </div>
             <div class="flex items-center justify-between">
@@ -27,7 +27,7 @@
                         <p>Admission are holistic, seeking individuals who demonstrate curiosity, potential, and a desire to contribute.</p>
                         <p>We invite you to join the Berows community and build a legacy of impact.</p>
                     </div>
-                    <span class="w-full p-3"><button class="bg-green-900 text-white py-3 px-6 rounded-lg">Learn More</button></span>
+                    <span class="w-full p-3"><button class="bg-green-900 text-white py-3 px-6 rounded-lg hover:scale-150 duration-500">Learn More</button></span>
                 </div>
                 <img src="/img2.png" alt="about" loading="lazy" class="hidden md:block md:w-100 lg:w-auto">
             </div>
