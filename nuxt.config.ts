@@ -11,4 +11,12 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+  app: {
+    head: {
+      titleTemplate: 'Berows University - %s',
+      link: [
+        {rel: 'icon', type: 'image/png', href: '/logo1.1.png'}
+      ],
+    }
+  },
 })
