@@ -14,10 +14,10 @@
         <nav :class="menu" class="w-fit h-fit relative">
             <ul class="bg-white p-3 rounded-lg flex flex-col gap-4 text-black shadow-lg absolute right-0 top-5">
                 <li><NuxtLink to="/">Home</NuxtLink></li>
-                <li><NuxtLink to="/">About</NuxtLink></li>
-                <li><NuxtLink to="/">Admission</NuxtLink></li>
-                <li><NuxtLink to="/">Academics</NuxtLink></li>
-                <li><NuxtLink to="/">Contact</NuxtLink></li>
+                <li><NuxtLink to="/about">About</NuxtLink></li>
+                <li><NuxtLink to="/admission">Admission</NuxtLink></li>
+                <li><NuxtLink to="/academics">Academics</NuxtLink></li>
+                <li><NuxtLink to="/contact">Contact</NuxtLink></li>
                 <li class="font-bold"><NuxtLink to="/">Login</NuxtLink></li>
             </ul>
         </nav>
@@ -25,11 +25,11 @@
         <nav class="hidden md:block">
             <ul class="md:flex justify-center items-center gap-4">
                 <li><NuxtLink to="/">Home</NuxtLink></li>
-                <li><NuxtLink to="/">About</NuxtLink></li>
-                <li><NuxtLink to="/">Admission</NuxtLink></li>
-                <li><NuxtLink to="/">Academics</NuxtLink></li>
-                <li><NuxtLink to="/">Contact</NuxtLink></li>
-                <li class="md:px-3 md:py-2 md:rounded-lg font-bold md:text-green-900 md:bg-white"><NuxtLink to="/">Login</NuxtLink></li>
+                <li><NuxtLink to="/about">About</NuxtLink></li>
+                <li><NuxtLink to="/admission">Admission</NuxtLink></li>
+                <li><NuxtLink to="/academics">Academics</NuxtLink></li>
+                <li><NuxtLink to="/contact">Contact</NuxtLink></li>
+                <li class="md:px-3 md:py-2 md:rounded-lg font-bold md:text-green-900 md:bg-white"><NuxtLink to="/login">Login</NuxtLink></li>
             </ul>
         </nav>
         <!---->

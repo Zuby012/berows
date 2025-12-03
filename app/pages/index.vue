@@ -32,8 +32,8 @@
                 <NuxtImg src="/img2.png" alt="about" format="webp" loading="lazy" class="hidden md:block md:w-100 lg:w-100" />
             </div>
         </main>
-        <footer>
-
+        <footer class="bg-gray-700 p-5">
+            <Footer></Footer>
         </footer>
     </body>
 </template>
