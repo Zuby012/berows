@@ -22,4 +22,7 @@ export default defineNuxtConfig({
       ],
     }
   },
+  generate: {
+    fallback: '404.html' // This ensures a 404.html file is created in the output directory
+  }
 })
