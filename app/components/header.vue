@@ -18,7 +18,7 @@
                 <li><NuxtLink to="/admission">Admission</NuxtLink></li>
                 <li><NuxtLink to="/academics">Academics</NuxtLink></li>
                 <li><NuxtLink to="/contact">Contact</NuxtLink></li>
-                <li class="font-bold"><NuxtLink to="/">Login</NuxtLink></li>
+                <li class="font-bold"><NuxtLink to="/login">Login</NuxtLink></li>
             </ul>
         </nav>
         <!--laptop responsive menu-->
