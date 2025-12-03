@@ -7,7 +7,7 @@
             <h1 class="text-4xl font-bold">About Berows University.</h1>
             <h2 class="text-2xl font-bold">Where Tradition Meets Innovation.</h2>
             <p>
-                <b>Welcome to Berows University</b>. For over [Number] years, we have been more than just a place of learning; 
+                <b>Welcome to Berows University</b>. For over 100 years, we have been more than just a place of learning; 
                 we are a community dedicated to the pursuit of truth, the creation of new knowledge, and the service of humanity. 
                 Our campus is a vibrant hub where diverse minds converge to shape the future.
             </p>
