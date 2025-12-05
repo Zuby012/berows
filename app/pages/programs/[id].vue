@@ -22,6 +22,14 @@ const route = useRoute();
 
 const pageRoute = route.params.id
 
+useHead({
+    title: pageRoute,
+    meta: [
+        { name: 'description', content: 'Detailed information about our academic programs at Berows University.' },
+        { name: 'keywords', content: 'Berows University, Programs, Courses, Education, Academic Programs' },
+    ],
+});
+
 const programDetails = [
     {
         name: 'Computer Science',
