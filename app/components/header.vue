@@ -16,7 +16,6 @@
                 <li><NuxtLink to="/">Home</NuxtLink></li>
                 <li><NuxtLink to="/about">About</NuxtLink></li>
                 <li><NuxtLink to="/admission">Admission</NuxtLink></li>
-                <li><NuxtLink to="/academics">Academics</NuxtLink></li>
                 <li><NuxtLink to="/contact">Contact</NuxtLink></li>
                 <li class="font-bold"><NuxtLink to="/login">Login</NuxtLink></li>
             </ul>
@@ -27,7 +26,6 @@
                 <li><NuxtLink to="/">Home</NuxtLink></li>
                 <li><NuxtLink to="/about">About</NuxtLink></li>
                 <li><NuxtLink to="/admission">Admission</NuxtLink></li>
-                <li><NuxtLink to="/academics">Academics</NuxtLink></li>
                 <li><NuxtLink to="/contact">Contact</NuxtLink></li>
                 <li class="md:px-3 md:py-2 md:rounded-lg font-bold md:text-green-900 md:bg-white"><NuxtLink to="/login">Login</NuxtLink></li>
             </ul>
