@@ -1,9 +1,8 @@
 <template>
-    <body class="bg-gray-100">
-        <header class="bg-green-900 p-5">
+        <header class="">
             <Header></Header>
         </header>
-        <main class="p-10 flex flex-col gap-10">
+        <main class="bg-gray-100 p-10 flex flex-col gap-10">
             <div class="flex items-center justify-between">
                 <img src="/img1.png" alt="welcome" loading="lazy" class="hidden md:block md:w-100 lg:w-auto" />
                 <div class="flex flex-col">
@@ -11,7 +10,7 @@
                     <p class="my-5">
                         Providing Quality Education since 1923.
                     </p>
-                    <span class="w-full p-3 flex lg:justify-center"><NuxtLink to="/about" class="bg-green-900 text-white py-3 px-6 rounded-lg hover:scale-150 duration-500">Learn More</NuxtLink></span>
+                    <span class="w-full p-3 flex lg:justify-center"><NuxtLink to="/about" class="bg-green-900 text-white py-3 px-6 rounded-lg hover:scale-150 duration-500">Apply Now</NuxtLink></span>
                 </div>
             </div>
             <div class="flex items-center justify-between">
@@ -32,10 +31,9 @@
                 <NuxtImg src="/img2.png" alt="about" format="webp" loading="lazy" class="hidden md:block md:w-100 lg:w-100" />
             </div>
         </main>
-        <footer class="bg-gray-700 p-5">
+        <footer class="">
             <Footer></Footer>
         </footer>
-    </body>
 </template>
 <script setup>
 

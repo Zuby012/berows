@@ -1,5 +1,5 @@
 <template>
-    <div class="text-white text-xs md:text-md lg:text-lg px-5 py-3 flex justify-between items-center gap-2">
+    <div class="bg-gray-700 p-5 text-white text-xs md:text-md lg:text-lg px-5 py-3 flex justify-between items-center gap-2">
         <div class="flex flex-col gap-1">
             <span class="text-lg md:text-xl font-extrabold">BEROWS UNIVERSITY</span>
             <span>Scientia Et Sapientia</span>

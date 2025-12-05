@@ -1,8 +1,8 @@
 <template>
-    <body>
-        <header class="bg-green-900 p-5">
+        <header class="">
             <Header></Header>
         </header>
+        <Breadcrumb></Breadcrumb>
         <main class="p-10 w-full flex flex-col gap-5">
             <h1 class="text-4xl font-bold">About Berows University.</h1>
             <h2 class="text-2xl font-bold">Where Tradition Meets Innovation.</h2>
@@ -68,10 +68,9 @@
             </p>
             <NuxtLink to="/contact" class="text-white bg-green-900 px-5 py-3 rounded-2xl w-40 font-bold flex justify-center items-center">Contact Us</NuxtLink>
         </main>
-        <footer class="bg-gray-700 p-5">
+        <footer class="">
             <Footer></Footer>
         </footer>
-    </body>
 </template>
 <script setup>
 

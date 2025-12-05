@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center justify-between text-white">
+    <div class="bg-green-900 p-5 flex items-center justify-between text-white">
         <!--logo and school name-->
         <div class="flex items-center gap-2">
             <NuxtImg src="/logo1.1.png" alt="Berows logo" format="webp" loading="lazy" class="w-25 h-20" />
