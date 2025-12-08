@@ -10,7 +10,7 @@
                     <p class="my-5">
                         Providing Quality Education since 1923.
                     </p>
-                    <span class="w-full p-3 flex lg:justify-center"><NuxtLink to="/about" class="bg-green-900 text-white py-3 px-6 rounded-lg hover:scale-150 duration-500">Apply Now</NuxtLink></span>
+                    <span class="w-full p-3 flex lg:justify-center"><NuxtLink to="/apply" target="_blank" class="bg-green-900 text-white py-3 px-6 rounded-lg hover:scale-150 duration-500">Apply Now</NuxtLink></span>
                 </div>
             </div>
             <div class="flex items-center justify-between">

@@ -3,8 +3,9 @@
         <Header></Header>
     </header>
     <main class="p-5">
+        <NuxtLink to="/admission">&larr; admission</NuxtLink>
         <div v-for="(program, index) in programDetails" :key="index">
-            <div v-if="program.name === pageRoute" class="max-w-4xl mx-auto bg-gray-100 p-5 rounded-lg shadow-md">
+            <div v-if="program.name === pageRoute" class="max-w-4xl mx-auto my-5 bg-gray-100 p-5 rounded-lg shadow-md">
                 <h1 class="text-3xl font-bold mb-4">{{ program.name }}</h1>
                 <p class="mb-4">{{ program.description }}</p>
                 <ul class="list-disc list-inside">
@@ -13,6 +14,7 @@
                 </ul>
             </div>
         </div>
+        <NuxtLink to="/apply" target="_blank" class="mx-40 my-10 px-5 py-3 text-white bg-green-900 rounded-lg shadow-md">Apply Now</NuxtLink>
     </main>
 </template>
 <script setup>

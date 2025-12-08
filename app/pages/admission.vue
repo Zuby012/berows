@@ -8,7 +8,7 @@
             <div class="flex md:justify-end items-end gap-1">
                 <span class="flex flex-col gap-1">
                     <h1 class="font-bold font-serif text-2xl">Start at Berows</h1>
-                    <NuxtLink class="w-fit px-5 py-3 rounded-lg bg-green-900 text-white">Apply Now</NuxtLink>
+                    <NuxtLink to="/apply" target="_blank" class="w-fit px-5 py-3 rounded-lg bg-green-900 text-white">Apply Now</NuxtLink>
                 </span>
                 <NuxtImg src="/img1.1.png" format="webp" loading="lazy" alt="img" class="w-20 hidden md:block" />
             </div>
@@ -36,7 +36,7 @@
         <!--section 2-->
         <div class="bg-green-900 text-white py-10 pl-10 flex flex-col items-start justify-center gap-3">
             <h2 class="w-full font-bold text-lg font-serif">How to Apply</h2>
-            <div class="flex flex-wrap gap-4">
+            <div class="mb-5 flex flex-wrap gap-4">
                 <div class="flex flex-col items-center py-3 pr-3 md:border-r-2 border-white">
                     <span class="text-4xl text-amber-600 font-serif font-bold">1.</span>
                     <p>Create an account</p>
@@ -50,6 +50,7 @@
                     <p>Upload O'level result to Jamb</p>
                 </div>
             </div>
+            <NuxtLink to="" class="w-fit px-5 py-3 rounded-lg bg-white text-green-900 font-bold">Check admission status</NuxtLink>
         </div>
         <!--section 3-->
         <div class="bg-green-900 text-white py-10 px-10 flex flex-col items-center">
