@@ -33,8 +33,8 @@ const props = ref({
     publicKey: 'pk_test_72a79bf619f4c679e607809c5a641f4e6b793013',
     email: '',
     regNum: '',
-    amount: 5000, // amount 
-    refSalt: Math.floor((Math.random() * 1000000000) + 1) * Math.floor((Math.random() * 1000000000) + 1),
+    amount: 5_000, // amount 
+    refSalt: Math.floor((Math.random() * 1_000_000_000) + 1) * Math.floor((Math.random() * 1_000_000_000) + 1),
 });
 
 const initializePayment = () => {
@@ -47,14 +47,14 @@ const initializePayment = () => {
     ref: `ref-${new Date().getSeconds()}${props.value.refSalt}`, // Replace with a reference you generated
     
     callback: function (response) {
-      //this happens after the payment is completed successfully
-      var reference = response.reference;
-      //########alert("Payment complete! Reference: " + reference);
+        //this happens after the payment is completed successfully
+        var reference = response.reference;
+        //########alert("Payment complete! Reference: " + reference);
 
-      //this happens after the payment is completed successfully
-      navigateTo('/apply')
+        //this happens after the payment is completed successfully
+        navigateTo('/apply')
 
-      // Make an AJAX call to your server with the reference to verify the transaction
+        // Make an AJAX call to your server with the reference to verify the transaction
         verifyPayment(reference);
     },
     onClose: function () {
@@ -68,9 +68,19 @@ const verifyPayment = async (reference) => {
     try {
         const response = await $fetch('/api/paystack/verify', {
             method: 'POST',
-            body: { reference: reference }
+            body: { 
+                reference: reference,
+                email: props.value.email,
+                regNum: props.value.regNum,
+                amount: props.value.amount,
+            },
         });
-        console.log('Payment verification response:', response);
+        if (response.status === 'success') {
+            alert('Payment verified successfully!');
+        } else {
+            alert('Payment verification failed. Please contact support.');
+            console.log('Verification response:', response);
+        }
     } catch (error) {
         console.error('Error verifying payment:', error);
     }
