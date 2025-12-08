@@ -43,29 +43,37 @@ const initializePayment = () => {
     email: props.value.email, // user email
     regNum: props.value.regNum, // user jamb reg number
     amount: props.value.amount * 100, // the amount value is multiplied by 100 to convert to the lowest currency unit
-
     currency: "NGN", // Use GHS for Ghana Cedis or USD for US Dollars
-
     ref: `ref-${new Date().getSeconds()}${props.value.refSalt}`, // Replace with a reference you generated
+    
     callback: function (response) {
       //this happens after the payment is completed successfully
       var reference = response.reference;
-      alert("Payment complete! Reference: " + reference);
+      //########alert("Payment complete! Reference: " + reference);
 
       //this happens after the payment is completed successfully
-      router.push({
-        path: "/success",
-        query: {
-          name: `${form.name}`,
-        },
-      });
+      navigateTo('/apply')
+
       // Make an AJAX call to your server with the reference to verify the transaction
+        verifyPayment(reference);
     },
     onClose: function () {
       alert("Transaction was not completed, window closed.");
     },
   });
   handler.openIframe();
+};
+
+const verifyPayment = async (reference) => {
+    try {
+        const response = await $fetch('/api/paystack/verify', {
+            method: 'POST',
+            body: { reference: reference }
+        });
+        console.log('Payment verification response:', response);
+    } catch (error) {
+        console.error('Error verifying payment:', error);
+    }
 };
 
 </script>
