@@ -1,5 +1,6 @@
 // server/api/paystack/webhooks.post.js
 import { defineEventHandler, readRawBody } from 'h3';
+import axios from "axios";
 import * as crypto from 'crypto';
 import { Query } from 'node-appwrite';
 
@@ -20,25 +21,37 @@ export default defineEventHandler(async (event) => {
   // Process the webhook body (which is a JSON payload)
   const data = JSON.parse(rawBody);
   if (data.event === 'charge.success') {
-    // Update your database to provide value to the customer (e.g., mark order as paid)
-    const document = await databases.listDocuments(
-        config.DATABASE_ID,
-        config.APPLICATION_COLLECTION_ID,
-        [
-            Query.equal('ref', data.data.reference),
-            Query.limit(1)
-        ]
-    )
-
-    if (document.total === 0) {
-        return { status: 'error', message: 'Transaction reference not found' };
-    }
-    await databases.updateDocument(
-        config.DATABASE_ID,
-        config.APPLICATION_COLLECTION_ID,
-        document.documents[0].$id,
-        { payed: 'completed' }
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Verify transaction with Paystack
+    const res = await axios.get(
+      `https://api.paystack.co/transaction/verify/${data.data.reference}`,
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.PAYSTACK_SECRET_KEY}`
+        },
+      }
     );
+    // Update your database to provide value to the customer (e.g., mark order as paid)
+    if (res.data.data.status === 'success') {
+        const document = await databases.listDocuments(
+            config.DATABASE_ID,
+            config.APPLICATION_COLLECTION_ID,
+            [
+                Query.equal('ref', data.data.reference),
+                Query.limit(1)
+            ]
+        )
+
+        if (document.total === 0) {
+            return { status: 'error', message: 'Transaction reference not found' };
+        }
+        await databases.updateDocument(
+            config.DATABASE_ID,
+            config.APPLICATION_COLLECTION_ID,
+            document.documents[0].$id,
+            { payed: 'completed' }
+        );
+    }
 
   }
 

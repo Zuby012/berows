@@ -1,4 +1,4 @@
-import axios from "axios";
+//import axios from "axios";
 import { ID } from 'node-appwrite';
 
 export default defineEventHandler(async (event) => {
@@ -7,6 +7,7 @@ export default defineEventHandler(async (event) => {
   const { databases } = useAppwrite();
 
   try {
+    /*
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Verify transaction with Paystack
     const res = await axios.get(
@@ -16,12 +17,12 @@ export default defineEventHandler(async (event) => {
           Authorization: `Bearer ${process.env.PAYSTACK_SECRET_KEY}`
         },
       }
-    );
+    );*/
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // If transaction is successful, store details in Appwrite
     const config = process.env;
-    if (res.data.data.status === 'success') {
+    //if (res.data.data.status === 'success') {
       
       // Validate required fields
       if (!reference || !email || !regNum || !amount) {
@@ -38,9 +39,9 @@ export default defineEventHandler(async (event) => {
 
       // Return success response
       return { status: 'success', message: 'Payment verified and recorded successfully', document };
-    }
+    //}
 
-    return res.data.data;
+    //return res.data.data;
   } catch (err) {
     return { status: false, message: err.message };
   }
