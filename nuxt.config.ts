@@ -10,6 +10,9 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+    server: {
+      allowedHosts: ['5736b880a33c.ngrok-free.app']
+    }
   },
   modules: [
     '@nuxt/image',

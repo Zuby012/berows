@@ -33,7 +33,7 @@ export default defineEventHandler(async (event) => {
         config.DATABASE_ID,
         config.APPLICATION_COLLECTION_ID,
         ID.unique(),
-        { ref:reference, jamb_reg:regNum, amount:amount, email:email, } // Data payload
+        { ref:reference, jamb_reg:regNum, amount:amount, email:email, payed:'pending', } // Data payload
       );
 
       // Return success response
