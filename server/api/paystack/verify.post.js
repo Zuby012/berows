@@ -7,6 +7,8 @@ export default defineEventHandler(async (event) => {
   const { databases } = useAppwrite();
 
   try {
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Verify transaction with Paystack
     const res = await axios.get(
       `https://api.paystack.co/transaction/verify/${reference}`,
       {
@@ -16,13 +18,16 @@ export default defineEventHandler(async (event) => {
       }
     );
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // If transaction is successful, store details in Appwrite
     const config = process.env;
     if (res.data.data.status === 'success') {
-
+      
+      // Validate required fields
       if (!reference || !email || !regNum || !amount) {
         throw createError({ statusMessage: 'Title is required', statusCode: 400 });
       }
+      
       // Store transaction details in Appwrite database
       const document = await databases.createDocument(
         config.DATABASE_ID,
@@ -30,6 +35,8 @@ export default defineEventHandler(async (event) => {
         ID.unique(),
         { ref:reference, jamb_reg:regNum, amount:amount, email:email, } // Data payload
       );
+
+      // Return success response
       return { status: 'success', message: 'Payment verified and recorded successfully', document };
     }
 
