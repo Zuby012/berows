@@ -79,10 +79,9 @@ const verifyPayment = async (reference) => {
             alert('Payment verified successfully!');
         } else {
             alert('Payment verification failed. Please contact support.');
-            console.log('Verification response:', response);
         }
     } catch (error) {
-        console.error('Error verifying payment:', error);
+        alert('Error verifying payment. Please try again later.');
     }
 };
 

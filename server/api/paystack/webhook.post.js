@@ -20,8 +20,7 @@ export default defineEventHandler(async (event) => {
   // Process the webhook body (which is a JSON payload)
   const data = JSON.parse(rawBody);
   if (data.event === 'charge.success') {
-    // 1. Verify the transaction again using the Paystack API (highly recommended)
-    // 2. Update your database to provide value to the customer (e.g., mark order as paid)
+    // Update your database to provide value to the customer (e.g., mark order as paid)
     const document = await databases.listDocuments(
         config.DATABASE_ID,
         config.APPLICATION_COLLECTION_ID,
@@ -41,7 +40,6 @@ export default defineEventHandler(async (event) => {
         { payed: 'completed' }
     );
 
-    console.log(`Transaction successful for reference: ${data.data.reference}`);
   }
 
   // Acknowledge receipt to Paystack
